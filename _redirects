@@ -1,0 +1,25 @@
+# UniPaws Static Website - Cloudflare Pages Redirects
+# https://developers.cloudflare.com/pages/configuration/redirects
+
+# Default page routing (Cloudflare handles this automatically for static sites)
+# Clean URLs - remove .html extension
+
+/about    /about.html    200
+/privacy  /privacy.html  200
+/terms    /terms.html    200
+
+# Handle trailing slashes
+/about/    /about.html    200
+/privacy/  /privacy.html  200
+/terms/    /terms.html    200
+
+# Redirect common variations
+/privacy-policy    /privacy.html    301
+/terms-of-service  /terms.html      301
+/tos               /terms.html      301
+/contact           /about.html#contact  301
+
+# App store redirects (replace with actual URLs when available)
+# /ios      https://apps.apple.com/app/unipaws/...  302
+# /android  https://play.google.com/store/apps/details?id=...  302
+# /download /index.html#download  302
