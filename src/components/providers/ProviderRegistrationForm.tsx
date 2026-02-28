@@ -6,7 +6,8 @@ import { Link } from '@/i18n/navigation';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Alert } from '@/components/ui/Alert';
-import { submitProviderApplication, type SubmitResult } from '@/app/[locale]/providers/register/actions';
+
+type SubmitResult = { success: true } | { error: string };
 
 const CATEGORIES = [
   'pet_friendly_restaurant',
@@ -86,24 +87,29 @@ export function ProviderRegistrationForm() {
     setLoading(true);
 
     try {
-      const res = await submitProviderApplication({
-        businessName,
-        categories,
-        shortDescription,
-        contactName,
-        email,
-        phone,
-        website,
-        address,
-        city,
-        area,
-        postalCode,
-        acceptedPets,
-        privacyConsent,
-        honeypot,
+      const res = await fetch('/api/providers/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          businessName,
+          categories,
+          shortDescription,
+          contactName,
+          email,
+          phone,
+          website,
+          address,
+          city,
+          area,
+          postalCode,
+          acceptedPets,
+          privacyConsent,
+          honeypot,
+        }),
       });
 
-      setResult(res);
+      const data: SubmitResult = await res.json();
+      setResult(data);
     } catch {
       setResult({ error: 'server_error' });
     } finally {

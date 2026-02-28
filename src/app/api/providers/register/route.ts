@@ -1,7 +1,7 @@
-'use server';
+export const runtime = 'edge';
 
+import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { headers } from 'next/headers';
 import { createAdminClient } from '@/lib/supabase/admin';
 
 const VALID_CATEGORIES = [
@@ -35,68 +35,34 @@ const providerSchema = z.object({
   honeypot: z.string().max(0),
 });
 
-// Simple in-memory rate limiter
-const rateLimitMap = new Map<string, number[]>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const windowMs = 60 * 60 * 1000; // 1 hour
-  const maxRequests = 3;
-
-  const timestamps = rateLimitMap.get(ip) ?? [];
-  const recent = timestamps.filter((t) => now - t < windowMs);
-
-  if (recent.length >= maxRequests) {
-    return true;
-  }
-
-  recent.push(now);
-  rateLimitMap.set(ip, recent);
-
-  // Cleanup old entries periodically
-  if (rateLimitMap.size > 1000) {
-    for (const [key, vals] of rateLimitMap) {
-      const filtered = vals.filter((t) => now - t < windowMs);
-      if (filtered.length === 0) {
-        rateLimitMap.delete(key);
-      } else {
-        rateLimitMap.set(key, filtered);
-      }
-    }
-  }
-
-  return false;
-}
-
 function stripHtml(str: string): string {
   return str.replace(/<[^>]*>/g, '').trim();
 }
 
-export type SubmitResult = { success: true } | { error: string };
-
-export async function submitProviderApplication(
-  formData: Record<string, unknown>,
-): Promise<SubmitResult> {
+export async function POST(request: Request) {
   // Rate limit by IP
-  const headersList = await headers();
-  const ip = headersList.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+  const ip = request.headers.get('cf-connecting-ip')
+    ?? request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    ?? 'unknown';
 
-  if (isRateLimited(ip)) {
-    return { error: 'rate_limited' };
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'invalid_json' }, { status: 400 });
   }
 
   // Validate
-  const parsed = providerSchema.safeParse(formData);
+  const parsed = providerSchema.safeParse(body);
   if (!parsed.success) {
-    return { error: 'validation_error' };
+    return NextResponse.json({ error: 'validation_error' }, { status: 400 });
   }
 
   const data = parsed.data;
 
-  // Honeypot check (already validated as empty, but double-check)
+  // Honeypot check — silently reject bots
   if (data.honeypot !== '') {
-    // Silently reject — pretend success to not tip off bots
-    return { success: true };
+    return NextResponse.json({ success: true });
   }
 
   // Sanitize text fields
@@ -129,14 +95,13 @@ export async function submitProviderApplication(
     is_verified: false,
     is_active: false,
     is_claimed: false,
-    // Store contact name in location_notes since there's no dedicated column
     location_notes: `Contact: ${contactName}`,
   });
 
   if (error) {
     console.error('Provider insert error:', error);
-    return { error: 'server_error' };
+    return NextResponse.json({ error: 'server_error' }, { status: 500 });
   }
 
-  return { success: true };
+  return NextResponse.json({ success: true });
 }
