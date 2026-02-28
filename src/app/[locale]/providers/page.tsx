@@ -12,6 +12,8 @@ import {
   Store,
 } from 'lucide-react';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

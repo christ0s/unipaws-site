@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Trophy, Heart, Droplets, Star, Medal, Download } from 'lucide-react';
 import { createServerClient } from '@/lib/supabase/server';
 
+export const runtime = 'edge';
+
 type Props = { params: Promise<{ locale: string }> };
 
 // ISR: revalidate every 5 minutes
