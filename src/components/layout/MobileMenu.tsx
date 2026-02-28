@@ -36,6 +36,7 @@ export function MobileMenu({ isOpen, onClose, isDark, onToggleDark }: MobileMenu
 
   const navLinks = [
     { href: '/' as const, label: t('nav.home') },
+    { href: '/providers' as const, label: t('nav.providers') },
   ];
 
   const trustCenterLinks = [

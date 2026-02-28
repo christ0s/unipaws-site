@@ -4,8 +4,6 @@ import { useState, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { AlertTriangle, CheckCircle, Download, Trash2 } from 'lucide-react';
 
-export const runtime = 'edge';
-
 type RequestType = 'export' | 'delete';
 
 export default function DataRequestPage() {

@@ -3,8 +3,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { Shield, FileText, Cookie, Download } from 'lucide-react';
 
-export const runtime = 'edge';
-
 type Props = {
   params: Promise<{ locale: string }>;
 };

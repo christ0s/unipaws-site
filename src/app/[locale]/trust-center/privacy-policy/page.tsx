@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
-export const runtime = 'edge';
-
 type Props = {
   params: Promise<{ locale: string }>;
 };

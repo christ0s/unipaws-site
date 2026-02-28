@@ -1,7 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Droplets, QrCode, Brain, Briefcase, UserPlus, Tag, Heart } from 'lucide-react';
-
-export const runtime = 'edge';
 import {
   HeroSection,
   StatsCounter,

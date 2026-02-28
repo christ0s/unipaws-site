@@ -92,6 +92,18 @@ export function Header() {
               {t('nav.home')}
             </Link>
 
+            <Link
+              href="/providers"
+              className={cn(
+                'text-sm font-medium transition-colors',
+                pathname.startsWith('/providers')
+                  ? 'text-primary-600 dark:text-primary-400'
+                  : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white',
+              )}
+            >
+              {t('nav.providers')}
+            </Link>
+
             {/* Trust Center dropdown */}
             <div ref={dropdownRef} className="relative">
               <button

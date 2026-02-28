@@ -198,49 +198,85 @@
     "goHome": "Return to Home"
   },
   "providers": {
-    "title": "For Pet Professionals",
-    "description": "Reach thousands of pet owners in Greece. Advertise your pet-friendly business on UniPaws.",
-    "heroTitle": "Grow Your Pet Business with UniPaws",
-    "heroSubtitle": "Whether you run a grooming salon, pet-friendly restaurant, training school, or pet sitting service — connect directly with pet owners who need you.",
+    "title": "Pet Services Directory",
+    "description": "A directory of pet-friendly businesses and services across Greece.",
+    "heroTitle": "Pet Services Directory",
+    "heroSubtitle": "A community directory of pet-friendly restaurants, grooming salons, trainers, pet sitters, and more across Greece.",
+    "badge": "Directory",
     "features": {
       "restaurants": {
         "title": "Pet-Friendly Restaurants",
-        "description": "List your restaurant as pet-friendly and attract animal-loving customers looking for welcoming dining spots."
+        "description": "Restaurants and cafes that welcome pets and their owners."
       },
       "grooming": {
         "title": "Pet Grooming",
-        "description": "Showcase your grooming services, pricing, and availability. Pet owners can find and book you instantly."
+        "description": "Professional grooming services for dogs, cats, and other pets."
       },
       "sitting": {
         "title": "Pet Sitting & Walking",
-        "description": "Offer pet sitting, dog walking, or boarding services. Build trust with reviews and verified profiles."
+        "description": "Trusted pet sitters, dog walkers, and boarding services."
       },
       "training": {
         "title": "Pet Trainers",
-        "description": "Promote your training programs and expertise. Connect with owners looking for obedience, agility, or behavior training."
+        "description": "Certified trainers offering obedience, agility, and behavior programs."
       }
     },
     "process": {
       "title": "How to Get Listed",
       "step1": {
-        "title": "Create Your Profile",
-        "description": "Download UniPaws and register as a service provider with your business details."
+        "title": "Fill Out the Form",
+        "description": "Complete the registration form with your business details."
       },
       "step2": {
-        "title": "Get Verified",
-        "description": "Submit your business info. Our team reviews and verifies within 48 hours."
+        "title": "Review & Verification",
+        "description": "Our team reviews your submission and verifies it within 48 hours."
       },
       "step3": {
-        "title": "Start Growing",
-        "description": "Appear in search results, receive inquiries, and grow your client base."
+        "title": "Go Live",
+        "description": "Once approved, your business appears in the directory for pet owners to find."
       }
     },
-    "ctaTitle": "Ready to reach pet owners?",
-    "ctaSubtitle": "Download UniPaws and register your business today.",
-    "stats": {
-      "petOwners": "Pet Owners",
-      "citiesCovered": "Cities Covered",
-      "monthlySearches": "Monthly Searches"
+    "ctaTitle": "Want to add your business?",
+    "ctaSubtitle": "Register your pet-friendly business in the UniPaws directory.",
+    "ctaButton": "Register Your Business",
+    "register": {
+      "title": "Register Your Business",
+      "subtitle": "Fill out the form below and our team will review your submission within 48 hours.",
+      "businessInfo": "Business Information",
+      "businessName": "Business Name",
+      "category": "Category",
+      "shortDescription": "Short Description",
+      "shortDescriptionHint": "Briefly describe what your business offers (10-300 characters)",
+      "contactInfo": "Contact Information",
+      "contactName": "Contact Name",
+      "email": "Email",
+      "phone": "Phone",
+      "website": "Website (optional)",
+      "locationInfo": "Location",
+      "address": "Address",
+      "city": "City",
+      "area": "Area / Neighborhood (optional)",
+      "postalCode": "Postal Code (optional)",
+      "petDetails": "Pet Details",
+      "acceptedPets": "Accepted Pets",
+      "dog": "Dogs",
+      "cat": "Cats",
+      "other": "Other",
+      "privacyConsent": "I agree to the <link>Privacy Policy</link>",
+      "submit": "Submit Application",
+      "success": "Application submitted!",
+      "successDetail": "Thank you for registering. Our team will review your submission and get back to you within 48 hours.",
+      "error": "Something went wrong. Please try again.",
+      "rateLimited": "Too many submissions. Please try again later.",
+      "categories": {
+        "pet_friendly_restaurant": "Pet-Friendly Restaurant",
+        "grooming": "Grooming",
+        "pet_sitting": "Pet Sitting",
+        "dog_walking": "Dog Walking",
+        "training": "Training",
+        "pet_shop": "Pet Shop",
+        "other": "Other"
+      }
     }
   },
   "heroes": {
