@@ -1,8 +1,9 @@
 export const runtime = 'edge';
 
+import { getRequestContext } from '@cloudflare/next-on-pages';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { createAdminClient } from '@/lib/supabase/admin';
+import { createClient } from '@supabase/supabase-js';
 
 const VALID_CATEGORIES = [
   'pet_friendly_restaurant',
@@ -70,8 +71,14 @@ export async function POST(request: Request) {
   const postalCode = data.postalCode || null;
   const website = data.website || null;
 
-  // Insert via service role client
-  const supabase = createAdminClient();
+  // Access Cloudflare runtime env (process.env doesn't work for secrets on CF Pages)
+  const { env } = getRequestContext();
+
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    env.SUPABASE_SERVICE_ROLE_KEY as string,
+    { auth: { persistSession: false, autoRefreshToken: false } },
+  );
 
   const { error } = await supabase.from('service_providers').insert({
     name,
