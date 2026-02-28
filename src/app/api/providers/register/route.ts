@@ -40,11 +40,6 @@ function stripHtml(str: string): string {
 }
 
 export async function POST(request: Request) {
-  // Rate limit by IP
-  const ip = request.headers.get('cf-connecting-ip')
-    ?? request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-    ?? 'unknown';
-
   let body: unknown;
   try {
     body = await request.json();
