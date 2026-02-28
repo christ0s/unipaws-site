@@ -1,0 +1,264 @@
+{
+  "common": {
+    "appName": "UniPaws",
+    "tagline": "Community",
+    "downloadApp": "Download the App",
+    "learnMore": "Learn More",
+    "home": "Home",
+    "loading": "Loading...",
+    "error": "Error",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "back": "Back",
+    "close": "Close",
+    "language": "Language",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "madeInGreece": "Made in Greece 🇬🇷"
+  },
+  "nav": {
+    "home": "Home",
+    "trustCenter": "Trust Center",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "dataRequest": "Data Request",
+    "heroes": "Heroes",
+    "providers": "Providers",
+    "blog": "Blog",
+    "partners": "Partners"
+  },
+  "footer": {
+    "brand": "The first pet blood donation network in Greece.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "social": "Social",
+    "copyright": "© {year} UniPaws. All rights reserved."
+  },
+  "homepage": {
+    "heroTitle": "Community",
+    "heroSubtitle": "The first pet blood donation network in Greece. Save lives with a single tap.",
+    "livesSaved": "Lives Saved",
+    "registeredDonors": "Registered Donors",
+    "vetsOnline": "Vets Online",
+    "features": {
+      "blood": {
+        "title": "Blood Donation Network",
+        "description": "Find blood donors in seconds, not hours."
+      },
+      "qr": {
+        "title": "QR Identity",
+        "description": "Digital pet ID with a QR collar tag."
+      },
+      "ai": {
+        "title": "AI Health Records",
+        "description": "Digitize lab results with artificial intelligence."
+      },
+      "services": {
+        "title": "Pet Services",
+        "description": "Vets, grooming, pet sitting and more."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": "Sign up and register your pet",
+      "step2": "Get a QR collar identity tag",
+      "step3": "Save lives through blood donation"
+    },
+    "ctaTitle": "Download UniPaws today",
+    "ctaSubtitle": "Available for iOS and Android."
+  },
+  "trustCenter": {
+    "title": "Trust Center",
+    "subtitle": "Your data security is our priority.",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "How we collect, use, and protect your data.",
+    "sections": {
+      "controller": {
+        "title": "1. Data Controller",
+        "content": "UniPaws (\"we\", \"us\") is the data controller for personal data collected through the UniPaws app and the unipaws.gr website. For any questions about data processing, you can contact us at privacy@unipaws.gr."
+      },
+      "dataCollected": {
+        "title": "2. Data We Collect",
+        "intro": "We collect the following data:",
+        "account": "Account details: Email, full name, phone, city.",
+        "pet": "Pet data: Name, species, breed, blood type, photo, medical history.",
+        "location": "Location data: For finding nearby blood donors and recording QR scans.",
+        "health": "Medical data: Vaccinations, blood tests, lab results.",
+        "ai": "AI data: Medical documents you upload are analyzed with artificial intelligence (Google Gemini) for data extraction.",
+        "push": "Push tokens: For sending blood donation notifications."
+      },
+      "legalBasis": {
+        "title": "3. Legal Basis for Processing",
+        "consent": "Consent: For push notifications and AI document analysis.",
+        "contract": "Contract: For providing our services (account, blood donation).",
+        "legitimate": "Legitimate interest: For improving services and security."
+      },
+      "retention": {
+        "title": "4. Data Retention",
+        "content": "Account data is retained as long as your account is active. Pet medical data is retained as long as the account exists or until you request deletion. QR scan data is retained for 12 months."
+      },
+      "rights": {
+        "title": "5. Your Rights (Articles 15-22 GDPR)",
+        "intro": "You have the following rights:",
+        "access": "Access: Right to receive a copy of your data.",
+        "rectification": "Rectification: Right to correct inaccurate data.",
+        "erasure": "Erasure: Right to delete your data (\"right to be forgotten\").",
+        "portability": "Portability: Right to receive data in a machine-readable format (JSON).",
+        "restriction": "Restriction: Right to restrict processing.",
+        "objection": "Objection: Right to object to certain processing.",
+        "cta": "To exercise your rights, visit the Data Request page."
+      },
+      "contact": {
+        "title": "6. Contact",
+        "content": "For any questions about your personal data, contact us at privacy@unipaws.gr or through the data request form."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "The rules and obligations for using UniPaws.",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By using the UniPaws app and the unipaws.gr website, you accept these Terms of Service. If you do not agree, please do not use our services."
+      },
+      "services": {
+        "title": "2. Service Description",
+        "content": "UniPaws provides: a pet blood donation network, digital identity via QR, medical history digitization with AI, and a pet services directory."
+      },
+      "vetDisclaimer": {
+        "title": "3. Veterinary Disclaimer",
+        "content": "UniPaws does NOT provide veterinary advice. AI analysis of lab results is purely informational and does not replace a veterinarian's assessment. Always consult a licensed veterinarian for your pet's care."
+      },
+      "bloodDonation": {
+        "title": "4. Blood Donation",
+        "content": "Pet blood donation is conducted exclusively under veterinary supervision. UniPaws facilitates connecting donors with recipients but bears no responsibility for the donation procedure."
+      },
+      "gamification": {
+        "title": "5. Scoring System (Heroes)",
+        "content": "Points and achievements in the Heroes system are awarded automatically based on successful donations. They have no monetary value and cannot be transferred."
+      },
+      "liability": {
+        "title": "6. Limitation of Liability",
+        "content": "UniPaws is provided \"as is\". We bear no liability for any damages arising from the use of the app, including incorrect AI analysis results."
+      }
+    }
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "description": "How we use cookies on unipaws.gr.",
+    "sections": {
+      "what": {
+        "title": "What Are Cookies",
+        "content": "Cookies are small files stored on your device that help us provide a better experience."
+      },
+      "essential": {
+        "title": "Essential Cookies",
+        "content": "These cookies are necessary for the website to function. They include: Supabase authentication session, language preference, theme preference (light/dark)."
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "content": "We use privacy-friendly analytics (no third-party cookies) to understand how you use the website. You can disable them at any time."
+      },
+      "manage": {
+        "title": "Managing Cookies",
+        "content": "You can change your preferences at any time via the cookie banner at the bottom of the page."
+      }
+    },
+    "banner": {
+      "message": "We use cookies to improve your experience.",
+      "accept": "Accept",
+      "reject": "Reject",
+      "customize": "Customize"
+    }
+  },
+  "dsar": {
+    "title": "Data Request",
+    "description": "Exercise your rights under GDPR.",
+    "subtitle": "Under the General Data Protection Regulation (GDPR), you have the right to access, export, or delete your data.",
+    "loginRequired": "You need to log in to the UniPaws app to submit a data request.",
+    "email": "Email",
+    "emailPlaceholder": "Enter your account email",
+    "requestType": "Request Type",
+    "exportData": "Export Data (JSON)",
+    "deleteAccount": "Delete Account",
+    "exportDescription": "Receive a copy of all your data in JSON format.",
+    "deleteDescription": "Permanently delete your account and all associated data.",
+    "submitRequest": "Submit Request",
+    "success": "Your request has been submitted successfully.",
+    "warning": "Account deletion is irreversible. All your data will be anonymized."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "The page you're looking for doesn't exist.",
+    "goHome": "Return to Home"
+  },
+  "providers": {
+    "title": "For Pet Professionals",
+    "description": "Reach thousands of pet owners in Greece. Advertise your pet-friendly business on UniPaws.",
+    "heroTitle": "Grow Your Pet Business with UniPaws",
+    "heroSubtitle": "Whether you run a grooming salon, pet-friendly restaurant, training school, or pet sitting service — connect directly with pet owners who need you.",
+    "features": {
+      "restaurants": {
+        "title": "Pet-Friendly Restaurants",
+        "description": "List your restaurant as pet-friendly and attract animal-loving customers looking for welcoming dining spots."
+      },
+      "grooming": {
+        "title": "Pet Grooming",
+        "description": "Showcase your grooming services, pricing, and availability. Pet owners can find and book you instantly."
+      },
+      "sitting": {
+        "title": "Pet Sitting & Walking",
+        "description": "Offer pet sitting, dog walking, or boarding services. Build trust with reviews and verified profiles."
+      },
+      "training": {
+        "title": "Pet Trainers",
+        "description": "Promote your training programs and expertise. Connect with owners looking for obedience, agility, or behavior training."
+      }
+    },
+    "process": {
+      "title": "How to Get Listed",
+      "step1": {
+        "title": "Create Your Profile",
+        "description": "Download UniPaws and register as a service provider with your business details."
+      },
+      "step2": {
+        "title": "Get Verified",
+        "description": "Submit your business info. Our team reviews and verifies within 48 hours."
+      },
+      "step3": {
+        "title": "Start Growing",
+        "description": "Appear in search results, receive inquiries, and grow your client base."
+      }
+    },
+    "ctaTitle": "Ready to reach pet owners?",
+    "ctaSubtitle": "Download UniPaws and register your business today.",
+    "stats": {
+      "petOwners": "Pet Owners",
+      "citiesCovered": "Cities Covered",
+      "monthlySearches": "Monthly Searches"
+    }
+  },
+  "heroes": {
+    "title": "Heroes Leaderboard",
+    "description": "Celebrating pets who save lives through blood donation.",
+    "subtitle": "Every donation matters. These heroes have given the gift of life.",
+    "donations": "Donations",
+    "livesSaved": "Lives Saved",
+    "points": "Points",
+    "rank": "Rank",
+    "emptyState": "No heroes yet. Be the first to donate!",
+    "tiers": {
+      "bronze": "Bronze Hero",
+      "silver": "Silver Hero",
+      "gold": "Gold Hero",
+      "platinum": "Platinum Hero"
+    },
+    "ctaTitle": "Want your pet to be a hero?",
+    "ctaSubtitle": "Download UniPaws and register as a blood donor."
+  }
+}

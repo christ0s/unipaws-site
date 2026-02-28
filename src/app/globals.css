@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* =====================================================
+   UNIPAWS WEB HUB - DESIGN SYSTEM (Tailwind v4)
+   Shared palette with admin-dashboard
+   ===================================================== */
+
+@theme {
+  /* Primary Brand (Orange) */
+  --color-primary-50: #FFF7ED;
+  --color-primary-100: #FFEDD5;
+  --color-primary-200: #FED7AA;
+  --color-primary-300: #FDBA74;
+  --color-primary-400: #FB923C;
+  --color-primary-500: #F97316;
+  --color-primary-600: #EA580C;
+  --color-primary-700: #C2410C;
+  --color-primary-800: #9A3412;
+  --color-primary-900: #7C2D12;
+
+  /* Status Colors - Success */
+  --color-success-50: #F0FDF4;
+  --color-success-100: #DCFCE7;
+  --color-success-200: #BBF7D0;
+  --color-success-500: #22C55E;
+  --color-success-600: #16A34A;
+  --color-success-700: #15803D;
+
+  /* Status Colors - Warning */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FEF3C7;
+  --color-warning-200: #FDE68A;
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #D97706;
+  --color-warning-700: #B45309;
+
+  /* Status Colors - Danger */
+  --color-danger-50: #FEF2F2;
+  --color-danger-100: #FEE2E2;
+  --color-danger-200: #FECACA;
+  --color-danger-500: #EF4444;
+  --color-danger-600: #DC2626;
+  --color-danger-700: #B91C1C;
+
+  /* Status Colors - Info */
+  --color-info-50: #EFF6FF;
+  --color-info-100: #DBEAFE;
+  --color-info-200: #BFDBFE;
+  --color-info-500: #3B82F6;
+  --color-info-600: #2563EB;
+  --color-info-700: #1D4ED8;
+
+  /* Hero / Gamification (Purple) */
+  --color-hero-50: #F5F3FF;
+  --color-hero-100: #EDE9FE;
+  --color-hero-200: #DDD6FE;
+  --color-hero-500: #8B5CF6;
+  --color-hero-600: #7C3AED;
+  --color-hero-700: #6D28D9;
+
+  /* Dark Mode Surface Colors */
+  --color-surface-50: #1C1C21;
+  --color-surface-100: #23232A;
+  --color-surface-200: #2A2A33;
+  --color-surface-300: #35353F;
+  --color-surface-400: #45454F;
+  --color-surface-500: #65656F;
+  --color-surface-600: #9090A0;
+  --color-surface-700: #B5B5C5;
+  --color-surface-800: #D0D0DC;
+  --color-surface-900: #EBEBF0;
+
+  /* Dark Mode Status Backgrounds */
+  --color-dark-success-bg: #0D2818;
+  --color-dark-warning-bg: #2A1E05;
+  --color-dark-danger-bg: #2A0A0A;
+  --color-dark-info-bg: #0A1628;
+
+  /* Box Shadows */
+  --shadow-card: 0 0 0 1px rgb(0 0 0 / 0.05), 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 0 0 1px rgb(0 0 0 / 0.05), 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-card-dark: 0 0 0 1px rgb(255 255 255 / 0.05), 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --shadow-card-hover-dark: 0 0 0 1px rgb(255 255 255 / 0.05), 0 10px 15px -3px rgb(0 0 0 / 0.4);
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+  --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-800 dark:bg-surface-50 dark:text-slate-200;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-slate-900 dark:text-white;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-slate-800 dark:text-slate-100;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-slate-800 dark:text-slate-100;
+  }
+
+  /* Focus ring for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+}
