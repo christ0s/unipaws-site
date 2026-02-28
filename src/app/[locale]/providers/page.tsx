@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

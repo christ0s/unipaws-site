@@ -1,5 +1,7 @@
 'use client';
 
+export const runtime = 'edge';
+
 import { useState, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { AlertTriangle, CheckCircle, Download, Trash2 } from 'lucide-react';
