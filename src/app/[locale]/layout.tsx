@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Header, Footer } from '@/components/layout';
 
+export const runtime = 'edge';
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;

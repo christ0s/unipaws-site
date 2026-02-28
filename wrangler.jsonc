@@ -1,7 +1,6 @@
 {
   "name": "unipaws-web",
+  "pages_build_output_dir": ".vercel/output/static",
   "compatibility_date": "2025-04-01",
-  "compatibility_flags": ["nodejs_compat"],
-  // Pages-specific config is handled by @opennextjs/cloudflare
-  // Run: npx @opennextjs/cloudflare build && wrangler deploy
+  "compatibility_flags": ["nodejs_compat"]
 }
